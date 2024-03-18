@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" id="input1" placeholder="enter number 1" />
+    <input type="number" id="input2"  placeholder="enter number 2" />
+
+    <button id="sum">sum</button>
+
+    <p id="show-sum"></p>
+    <input type="text"  id="show-sum">
+    <script src="script2.js"></script>
+    <script>
+      function sum() {
+        const input1 = document.getElementById("input1").value;
+        const input2 = document.getElementById("input2").value;
+
+        const sum = input1 * input2;
+        document.getElementById("show-sum").value = sum;
+      }
+    </script>
+  </body>
+</html>
