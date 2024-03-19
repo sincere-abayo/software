@@ -83,7 +83,6 @@ $executeQuery = $conn->execute_query($selectQuery);
         }
     </script>
 
-    <!-- <a href="test.php?test=morning">test link</a> -->
 </body>
 
 </html>
