@@ -1,0 +1,22 @@
+table,tr,td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+table{
+    width: 700px;
+    text-align: center;
+
+}
+
+tr{
+    background-color: burlywood;
+}
+td
+{
+    background-color: rgb(156, 80, 227);
+    font-weight: bold;
+}
+
+td a{
+    color: red;
+}

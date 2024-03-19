@@ -25,9 +25,9 @@ if (!isset($_SESSION['email'])) {
             <div class="nav">
 
                 <ul>
-                    <li style="float:left"><a class="active" href="#home">Home</a></li>
-                    <li><a href="#login">profile</a></li>
-                    <li><a href="#register">log out</a></li>
+                    <li style="float:left"><a class="active" href="home.php">Home</a></li>
+                    <li><a href="profile.php">profile</a></li>
+                    <li><a href="logout.php">log out</a></li>
 
                 </ul>
             </div>

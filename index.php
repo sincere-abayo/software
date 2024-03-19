@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 session_start();
 ?>
@@ -140,8 +140,8 @@ session_start();
                 $bindInsert = $conn->query($insert);
 
                 if ($bindInsert === TRUE) {
- 
-                $_SESSION['userEmail']= $email;
+
+                    $_SESSION['email'] = $email;
 
                     echo "<script>alert('account created well');</script>";
                     //php header location 
