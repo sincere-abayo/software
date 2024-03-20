@@ -7,7 +7,8 @@ if (fwrite($myfile, "new data"))
     echo "done";
    $file_name=fopen("class.txt","r");
 
-   echo fread($file_name,filesize("class.txt"));
+echo fread($file_name,filesize
+("class.txt"));
 }
 else 
 {

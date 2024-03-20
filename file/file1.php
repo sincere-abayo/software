@@ -1,5 +1,6 @@
 <?php
-$file_name = fopen("hell.txt", "r") or die ("fail not exist");
+$file_name = fopen("hell.txt", "r")
+ or die ("fail not exist");
 
 //getting file size
 $size = filesize("hello.txt");
@@ -13,7 +14,8 @@ feof($file_name);
 $a = 1;
 //getting file by line 
 while (!feof($file_name)) {
-    echo  fgets($file_name) . "<br>";
+    echo  fgets($file_name) . 
+    "<br>";
     $a++;
 }
 
