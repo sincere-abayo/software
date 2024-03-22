@@ -13,17 +13,19 @@
         <br> <input type="submit" name="upload">
     </form>
     <?php
-    $conn = mysqli_connect("localhost", "root", "","tesd_db");
+    $conn = mysqli_connect("localhost", "root", "", "tesd_db");
     if (isset($_POST['upload'])) {
-     $name = rand(00000, 99999) . $_FILES['image']['name'];
+        $name = rand(00000, 99999) . $_FILES['image']['name'];
         $path = "upload/";
         $file = $path . basename($name);
         $file_content = $_FILES['image']['tmp_name'];
         $size = $_FILES['image']['size'];
         $info = pathinfo($name);
         $extension = strtolower($info['extension']);
-        $allowed_extension = ["png", "jpg", "jpeg", 
-        "gif", "tiff"];
+        $allowed_extension = [
+            "png", "jpg", "jpeg",
+            "gif", "tiff"
+        ];
         if (file_exists($file)) {
             echo "file already exist";
         } else {
@@ -74,25 +76,14 @@
             <tr>
                 <td><?php echo $n ?></td>
                 <td><img width="200px" height="100px" src="<?php echo $img_name ?>"></td>
-                <table width="400px">
-                    <tr>
-                        <th>no</th>
-                        <th>image</th>
-                        <th>date</th>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td><img src="upload/15128images1.jpeg"></td>
-                        <td>20.20.2029</td>
-                    </tr>
-                </table>
                 <td><?php echo $img_date ?></td>
-            </tr>
+                 
 
-        <?php
+
+            <?php
             $n++;
         }
-        ?>
+            ?>
     </table>
 </body>
 
