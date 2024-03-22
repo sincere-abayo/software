@@ -77,9 +77,6 @@
                 <td><?php echo $n ?></td>
                 <td><img width="200px" height="100px" src="<?php echo $img_name ?>"></td>
                 <td><?php echo $img_date ?></td>
-                 
-
-
             <?php
             $n++;
         }
