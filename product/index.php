@@ -17,20 +17,41 @@
         </div>
     </nav>
 
-    <div class="main">
 
-        <table >
-            <tr>
-                <td> <img src="images/th (9).jpeg" alt="image"> </td>
-                <td> <img src="images/th (8).jpeg" alt="image"> </td>
-                <td> <img src="images/th (7).jpeg" alt="image"> </td>
-                <td> <img src="images/th (11).jpeg" alt="image"> </td>
+    <table>
+        <?php
+        include 'conn.php';
+        $selectProduct = mysqli_query($conn, "SELECT * from users join product on (users.u_id = product.u_id)");
 
-            </tr>
-        </table>
+        ?>
+
+        <div class="table">
+
+            <?php
+            $counter = 0;
+            while ($productData = mysqli_fetch_array($selectProduct)) {
+                if ($counter >= 4) {
+                    echo '</div> <div class="table">';
+                    $counter = 0;
+                }
+                $counter++;
+            ?>
+
+                <div class="row ">
+                    <p class="center">name: <?php echo $productData['p_name'] ?>
+                        qty: <?php echo $productData['p_quantity'] ?></p>
+                    <img src="<?php echo $productData['p_image'] ?>" alt="">
+                    <p class="center"><?php echo $productData['p_desc'] ?></p>
+                    <p class="center"><?php echo $productData['p_date'] ?></p>
+                    <p class="center">by: <?php echo $productData['u_names'] ?></p>
+                </div>
+
+            <?php
+            }
+            ?>
+        </div>
 
 
-    </div>
 </body>
 
 </html>

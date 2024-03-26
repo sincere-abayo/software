@@ -35,3 +35,37 @@ table{
     height: 200px;
 
 }
+
+ .form
+{
+    /* background-color: rgb(106, 88, 196); */
+    border: 1px solid burlywood;
+
+}
+
+
+.center
+{
+    display:flex; justify-content:center
+}
+
+.table {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+    padding-left: 50px;
+
+ 
+}
+
+.table div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid black;
+}
+
+.table div img {
+    width: 100%;
+    height: auto;
+}
